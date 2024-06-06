@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'WorkSans';
+  src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+::-webkit-scrollbar {
+  display: none;  
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+* {
+  color: white;
+  font-family: 'WorkSans';
+}
+
+header {
+  background-image: url(./assets/images/backgroundImage.jpg);
+}
+
+section {
+  background-color: black;
+}
+
+footer {
+  background-color: black;
+}
