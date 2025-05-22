@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import ScrollingIcon from "../../assets/icons/scrollinIcon.png";
 import { techs } from "../../constants/techs";
 
 export const Index = () => {
@@ -27,19 +26,21 @@ export const Index = () => {
           </div>
         ))}
       </div>
-      <h2 className="text-base md:text-xl mt-4 md:mt-8">
+      <h2 className="hidden text-base md:text-xl mt-4 md:mt-8 md:block">
         {t("techs.description2")}
       </h2>
-      <div className="w-full md:w-[550px] flex my-6 md:my-[100px] gap-2 md:gap-3 flex justify-center self-center">
+      <div className="hidden w-full justify-center gap-2 md:gap-3 pt-[50px] md:flex">
         <div>
           <h2 className="text-lg md:text-2xl">{t("scroll.message2")}</h2>
           <hr className="mt-3" />
         </div>
-        <img
-          src={ScrollingIcon}
-          alt="scrollingIcon"
-          className="w-8 md:w-[50px]"
-        />
+        <div>
+          <img
+            src="/icons/scrollinIcon.png"
+            alt="scrollingIcon"
+            className="w-8 md:w-[50px]"
+          />
+        </div>
       </div>
     </section>
   );

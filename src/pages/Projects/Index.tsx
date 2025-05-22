@@ -13,7 +13,7 @@ export const Index = () => {
         <h1 className="text-3xl md:text-5xl font-bold">
           {t("projects.title")}
         </h1>
-        <p className="text-base md:text-xl my-4 md:my-7">
+        <h2 className="text-base md:text-xl my-4 md:my-7">
           {t("projects.description")}
           <a
             href={links.githubRepositories}
@@ -22,10 +22,9 @@ export const Index = () => {
           >
             {t("projects.linkWord")}
           </a>
-        </p>
+        </h2>
       </div>
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4 my-4 md:my-9 overflow-y-auto md:overflow-visible max-h-[60vh] md:max-h-none">
-        <ProjectContainer />
         <ProjectContainer />
         <ProjectContainer />
       </div>

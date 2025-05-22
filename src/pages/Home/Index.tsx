@@ -1,9 +1,4 @@
-import userImage from "../../assets/images/userImage.webp";
 import { links } from "../../constants/links";
-import LinkedinIcon from "../../assets/icons/linkedinIcon.png";
-import GithubIcon from "../../assets/icons/githubIcon.png";
-import DownloadIcon from "../../assets/icons/downloadIcon.png";
-import ScrollingIcon from "../../assets/icons/scrollinIcon.png";
 import { useTranslation } from "react-i18next";
 
 export const Index = () => {
@@ -26,37 +21,41 @@ export const Index = () => {
           </div>
         </div>
 
-        <div className="flex gap-10">
+        <div className="flex gap-10 pt-5 md:pt-0">
           <div>
             <a href={links.linkedin} target="_blank">
-              <img src={LinkedinIcon} className="w-8 md:w-[40px]" />
+              <img src="/icons/linkedinIcon.png" className="w-8 md:w-[40px]" />
             </a>
           </div>
           <div>
             <a href={links.github} target="_blank">
-              <img src={GithubIcon} className="w-8 md:w-[40px]" />
+              <img src="/icons/githubIcon.png" className="w-8 md:w-[40px]" />
             </a>
           </div>
           <div>
-            <button className="w-[60px] md:w-[80px] h-full bg-white text-black font-bold rounded-md border flex justify-center items-center">
+            <a
+              download="cvezequielmonaco.pdf"
+              href="/cvezequielmonaco.pdf"
+              className="w-[60px] md:w-[80px] h-full bg-white text-black font-bold rounded-md border flex justify-center items-center"
+            >
               CV
               <img
-                src={DownloadIcon}
+                src="/icons/downloadIcon.png"
                 alt="downloadIcon"
                 className="max-w-[20px] md:max-w-[25px] bg-white pl-1"
               />
-            </button>
+            </a>
           </div>
         </div>
 
-        <div className="w-full md:w-[800px] flex gap-2 md:gap-3 pt-5 md:pt-[80px]">
+        <div className="w-full md:w-[800px] flex gap-2 md:gap-3 pt-[50px]">
           <div>
             <h2 className="text-lg md:text-2xl">{t("scroll.message")}</h2>
             <hr className="mt-3" />
           </div>
           <div>
             <img
-              src={ScrollingIcon}
+              src="/icons/scrollinIcon.png"
               alt="scrollingIcon"
               className="w-8 md:w-[50px]"
             />
@@ -65,7 +64,7 @@ export const Index = () => {
       </div>
       <div className="hidden md:flex justify-center items-center">
         <img
-          src={userImage}
+          src="/images/userImage.webp"
           alt="Perfil"
           className="max-w-full max-h-[70vh] object-contain"
         />

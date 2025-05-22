@@ -1,12 +1,12 @@
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 
-const ThemeSelector = (): ReactNode => {
+/* const ThemeSelector = (): ReactNode => {
   const [isDark, setIsDark] = useState(false);
 
   return (
     <button
-      className="w-8 h-8 md:w-10 md:h-10 bg-gray-200 dark:bg-gray-700 rounded-md flex items-center justify-center"
+      className="w-10 h-10 md:w-10 md:h-10 bg-gray-200 dark:bg-gray-700 rounded-md flex items-center justify-center"
       onClick={() => setIsDark(!isDark)}
     >
       {isDark ? (
@@ -16,7 +16,7 @@ const ThemeSelector = (): ReactNode => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-4 h-4 md:w-5 md:h-5"
+          className="w-5 h-5 md:w-6 md:h-6"
         >
           <path
             strokeLinecap="round"
@@ -31,7 +31,7 @@ const ThemeSelector = (): ReactNode => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-4 h-4 md:w-5 md:h-5"
+          className="w-5 h-5 md:w-6 md:h-6"
         >
           <path
             strokeLinecap="round"
@@ -42,7 +42,7 @@ const ThemeSelector = (): ReactNode => {
       )}
     </button>
   );
-};
+}; */
 
 const LanguageSelector = (): ReactNode => {
   const { i18n } = useTranslation();
@@ -53,7 +53,7 @@ const LanguageSelector = (): ReactNode => {
 
   return (
     <button
-      className="w-8 h-8 md:w-10 md:h-10 bg-gray-200 dark:bg-gray-700 rounded-md flex items-center justify-center font-medium text-sm md:text-base"
+      className="w-10 h-10 md:w-10 md:h-10 bg-gray-200 dark:bg-gray-700 rounded-md flex items-center justify-center font-medium text-sm md:text-base"
       onClick={() => handleChange(i18n.language === "es" ? "en" : "es")}
     >
       {i18n.language === "es" ? "ES" : "EN"}
@@ -64,7 +64,7 @@ const LanguageSelector = (): ReactNode => {
 export const ThemeAndLanguageSelector = () => {
   return (
     <div className="flex gap-2 fixed bottom-3 right-3 md:bottom-4 md:right-4 z-50">
-      <ThemeSelector />
+      {/* <ThemeSelector /> */}
       <LanguageSelector />
     </div>
   );

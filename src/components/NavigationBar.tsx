@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
 export const NavigationBar = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -7,42 +7,13 @@ export const NavigationBar = () => {
   const navItems = [
     { href: "#header", text: "inicio", num: "01" },
     { href: "#about", text: "sobre mí", num: "02" },
-    { href: "#techs", text: "tecnologias", num: "03" },
+    { href: "#techs", text: "habilidades y tecnologias", num: "03" },
     { href: "#projects", text: "proyectos", num: "04" },
     { href: "#contact", text: "contacto", num: "05" },
   ];
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  return (
-    <nav className="fixed top-0 right-0 h-screen flex justify-end items-center z-50">
-      <div className="h-[50vh] w-[3px] md:w-[4px] bg-white fixed right-0 top-1/2 -translate-y-1/2" />
-
-      {/* Mobile menu toggle */}
-      <button
-        className="md:hidden fixed top-4 right-4 w-8 h-8 flex flex-col justify-center items-center gap-1 z-50"
-        onClick={toggleMobileMenu}
-      >
-        <div
-          className={`w-6 h-0.5 bg-white transform transition-transform ${
-            mobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
-          }`}
-        ></div>
-        <div
-          className={`w-6 h-0.5 bg-white transition-opacity ${
-            mobileMenuOpen ? "opacity-0" : "opacity-100"
-          }`}
-        ></div>
-        <div
-          className={`w-6 h-0.5 bg-white transform transition-transform ${
-            mobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-          }`}
-        ></div>
-      </button>
-
-      {/* Mobile menu */}
+  const RenderMenuOpen = (): ReactNode => {
+    return (
       <div
         className={`md:hidden fixed top-0 right-0 w-full h-screen bg-black bg-opacity-90 transform transition-transform ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
@@ -62,8 +33,42 @@ export const NavigationBar = () => {
           ))}
         </div>
       </div>
+    );
+  };
 
-      {/* Desktop */}
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  return (
+    <nav
+      className="fixed top-0 right-0 h-screen flex justify-end items-center z-50"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="h-[50vh] w-[3px] md:w-[4px] bg-white fixed right-0 top-1/2 -translate-y-1/2" />
+
+      <button
+        className="md:hidden fixed top-4 right-4 w-8 h-8 flex flex-col justify-center items-center gap-1 z-50"
+        onClick={toggleMobileMenu}
+      >
+        <div
+          className={`w-6 h-0.5 bg-white transform transition-transform ${
+            mobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+          }`}
+        />
+        <div
+          className={`w-6 h-0.5 bg-white transition-opacity ${
+            mobileMenuOpen ? "opacity-0" : "opacity-100"
+          }`}
+        />
+        <div
+          className={`w-6 h-0.5 bg-white transform transition-transform ${
+            mobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+          }`}
+        />
+      </button>
+
       <div
         className={`hidden md:flex flex-col justify-center items-end transition-all duration-300 ${
           isHovered ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
@@ -82,18 +87,7 @@ export const NavigationBar = () => {
         ))}
       </div>
 
-      {/* Small dots for mobile */}
-      <div className="md:hidden flex flex-col justify-center items-center fixed right-3 top-1/2 -translate-y-1/2 gap-4">
-        {navItems.map((item) => (
-          <a
-            key={item.num}
-            href={item.href}
-            className="w-2 h-2 rounded-full bg-white hover:bg-white hover:scale-150 transition-transform"
-          >
-            <span className="sr-only">{item.text}</span>
-          </a>
-        ))}
-      </div>
+      <RenderMenuOpen />
     </nav>
   );
 };
