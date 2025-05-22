@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import AboutMeImage from "../../assets/images/aboutMeImage.png";
 
 export const Index = () => {
   const { t } = useTranslation();
@@ -14,7 +15,7 @@ export const Index = () => {
         <h2 className="text-base md:text-xl">{t("aboutme.description")}</h2>
       </div>
       <img
-        src="/images/aboutMeImage.png"
+        src={AboutMeImage}
         alt="aboutMeImage"
         className="w-[150px] md:w-[300px]"
       />

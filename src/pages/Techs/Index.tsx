@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { techs } from "../../constants/techs";
+import ScrollingIcon from "../../assets/icons/scrollinIcon.png";
 
 export const Index = () => {
   const { t } = useTranslation();
@@ -36,7 +37,7 @@ export const Index = () => {
         </div>
         <div>
           <img
-            src="/icons/scrollinIcon.png"
+            src={ScrollingIcon}
             alt="scrollingIcon"
             className="w-8 md:w-[50px]"
           />

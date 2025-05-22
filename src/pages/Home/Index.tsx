@@ -1,5 +1,10 @@
 import { links } from "../../constants/links";
 import { useTranslation } from "react-i18next";
+import LinkedinIcon from "../../assets/icons/linkedinIcon.png";
+import GithubIcon from "../../assets/icons/githubIcon.png";
+import DownloadIcon from "../../assets/icons/downloadIcon.png";
+import ScrollingIcon from "../../assets/icons/scrollinIcon.png";
+import UserImage from "../../assets/images/userImage.webp";
 
 export const Index = () => {
   const { t } = useTranslation();
@@ -24,12 +29,12 @@ export const Index = () => {
         <div className="flex gap-10 pt-5 md:pt-0">
           <div>
             <a href={links.linkedin} target="_blank">
-              <img src="/icons/linkedinIcon.png" className="w-8 md:w-[40px]" />
+              <img src={LinkedinIcon} className="w-8 md:w-[40px]" />
             </a>
           </div>
           <div>
             <a href={links.github} target="_blank">
-              <img src="/icons/githubIcon.png" className="w-8 md:w-[40px]" />
+              <img src={GithubIcon} className="w-8 md:w-[40px]" />
             </a>
           </div>
           <div>
@@ -40,7 +45,7 @@ export const Index = () => {
             >
               CV
               <img
-                src="/icons/downloadIcon.png"
+                src={DownloadIcon}
                 alt="downloadIcon"
                 className="max-w-[20px] md:max-w-[25px] bg-white pl-1"
               />
@@ -55,7 +60,7 @@ export const Index = () => {
           </div>
           <div>
             <img
-              src="/icons/scrollinIcon.png"
+              src={ScrollingIcon}
               alt="scrollingIcon"
               className="w-8 md:w-[50px]"
             />
@@ -64,7 +69,7 @@ export const Index = () => {
       </div>
       <div className="hidden md:flex justify-center items-center">
         <img
-          src="/images/userImage.webp"
+          src={UserImage}
           alt="Perfil"
           className="max-w-full max-h-[70vh] object-contain"
         />

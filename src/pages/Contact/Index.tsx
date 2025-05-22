@@ -1,5 +1,7 @@
 import { links } from "../../constants/links";
 import { useTranslation } from "react-i18next";
+import LinkedinIcon from "../../assets/icons/linkedinIcon.png";
+import GithubIcon from "../../assets/icons/githubIcon.png";
 
 export const Index = () => {
   const { t } = useTranslation();
@@ -29,12 +31,12 @@ export const Index = () => {
         <div className="flex w-[100px] md:w-[125px] justify-between items-center">
           <div>
             <a href={links.linkedin} target="_blank">
-              <img src="/icons/linkedinIcon.png" className="w-8 md:w-[40px]" />
+              <img src={LinkedinIcon} className="w-8 md:w-[40px]" />
             </a>
           </div>
           <div>
             <a href={links.github} target="_blank">
-              <img src="/icons/githubIcon.png" className="w-8 md:w-[40px]" />
+              <img src={GithubIcon} className="w-8 md:w-[40px]" />
             </a>
           </div>
         </div>

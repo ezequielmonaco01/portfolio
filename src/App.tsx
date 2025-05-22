@@ -7,6 +7,7 @@ import { Index as Projects } from "./pages/Projects/Index";
 import { Index as Contact } from "./pages/Contact/Index";
 import { NavigationBar } from "./components/NavigationBar";
 import { ThemeAndLanguageSelector } from "./components/ThemeAndLanguageSelector";
+
 export const App = () => {
   return (
     <div className="w-full h-screen snap-y snap-mandatory relative overflow-auto bg-black overscroll-none">
