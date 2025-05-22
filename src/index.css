@@ -3,25 +3,17 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'WorkSans';
+  font-family: "WorkSans";
   src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
 }
 
 ::-webkit-scrollbar {
-  display: none;  
+  display: none;
 }
-
-/* html {
-  scroll-behavior: smooth;
-} */
 
 * {
   color: white;
-  font-family: 'WorkSans';
-}
-
-header {
-  background-image: url(./assets/images/backgroundImage.jpg);
+  font-family: "WorkSans";
 }
 
 section {
@@ -30,4 +22,45 @@ section {
 
 footer {
   background-color: black;
+}
+
+/* Estilos de navegación */
+nav {
+  z-index: 50;
+}
+
+nav a {
+  transition: all 0.3s ease;
+  position: relative;
+  opacity: 0.7;
+}
+
+nav a:hover {
+  opacity: 1;
+  transform: translateX(-8px);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-size: 1.25rem !important;
+  }
+
+  p,
+  span {
+    font-size: 1rem !important;
+  }
+
+  .p-\[100px\] {
+    padding: 2rem !important;
+  }
+
+  .p-\[85px\] {
+    padding: 2rem !important;
+  }
 }

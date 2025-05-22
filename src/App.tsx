@@ -1,32 +1,22 @@
-import "./index.css"
+import "./index.css";
 
-import { Index as Header} from "./components/Header/Index"
-import { Index as AboutMe} from "./components/AboutMe/Index"
-import { Index as Techs} from "./components/Techs/Index"
-import { Index as Projects} from "./components/Projects/Index"
-import { Index as WorkExperience} from "./components/WorkExperience/Index"
-import { Index as Contact} from "./components/Contact/Index"
-import { NavigationBar } from "./components/NavigationBar/NavigationBar"
-
+import { Index as Header } from "./pages/Home/Index";
+import { Index as AboutMe } from "./pages/AboutMe/Index";
+import { Index as Techs } from "./pages/Techs/Index";
+import { Index as Projects } from "./pages/Projects/Index";
+import { Index as Contact } from "./pages/Contact/Index";
+import { NavigationBar } from "./components/NavigationBar";
+import { ThemeAndLanguageSelector } from "./components/ThemeAndLanguageSelector";
 export const App = () => {
   return (
-    <div className="snap-y snap-mandatory relative w-full h-screen overflow-auto">
-    <NavigationBar/>
-      <div className="snap-center">
-        <Header/>
-      </div>
-      <div className="snap-center">
-        <AboutMe/>
-      </div>
-      <div className="snap-center">
-        <Techs/>
-      </div>
-      <div className="snap-center">
-        <Projects/>
-      </div>
-      <div className="snap-center">
-        <Contact/>
-      </div>
+    <div className="w-full h-screen snap-y snap-mandatory relative overflow-auto bg-black overscroll-none">
+      <NavigationBar />
+      <Header />
+      <AboutMe />
+      <Techs />
+      <Projects />
+      <Contact />
+      <ThemeAndLanguageSelector />
     </div>
-  )
-}
+  );
+};

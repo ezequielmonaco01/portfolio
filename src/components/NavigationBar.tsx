@@ -1,0 +1,99 @@
+import { useState } from "react";
+
+export const NavigationBar = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navItems = [
+    { href: "#header", text: "inicio", num: "01" },
+    { href: "#about", text: "sobre mí", num: "02" },
+    { href: "#techs", text: "tecnologias", num: "03" },
+    { href: "#projects", text: "proyectos", num: "04" },
+    { href: "#contact", text: "contacto", num: "05" },
+  ];
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  return (
+    <nav className="fixed top-0 right-0 h-screen flex justify-end items-center z-50">
+      <div className="h-[50vh] w-[3px] md:w-[4px] bg-white fixed right-0 top-1/2 -translate-y-1/2" />
+
+      {/* Mobile menu toggle */}
+      <button
+        className="md:hidden fixed top-4 right-4 w-8 h-8 flex flex-col justify-center items-center gap-1 z-50"
+        onClick={toggleMobileMenu}
+      >
+        <div
+          className={`w-6 h-0.5 bg-white transform transition-transform ${
+            mobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+          }`}
+        ></div>
+        <div
+          className={`w-6 h-0.5 bg-white transition-opacity ${
+            mobileMenuOpen ? "opacity-0" : "opacity-100"
+          }`}
+        ></div>
+        <div
+          className={`w-6 h-0.5 bg-white transform transition-transform ${
+            mobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+          }`}
+        ></div>
+      </button>
+
+      {/* Mobile menu */}
+      <div
+        className={`md:hidden fixed top-0 right-0 w-full h-screen bg-black bg-opacity-90 transform transition-transform ${
+          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        } flex flex-col justify-center items-center z-40`}
+      >
+        <div className="flex flex-col items-center gap-6">
+          {navItems.map((item) => (
+            <a
+              key={item.num}
+              href={item.href}
+              className="flex items-center gap-3 text-xl"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span className="font-bold">{item.num}</span>
+              <span>{item.text}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop */}
+      <div
+        className={`hidden md:flex flex-col justify-center items-end transition-all duration-300 ${
+          isHovered ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
+        }`}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {navItems.map((item) => (
+          <a
+            key={item.num}
+            href={item.href}
+            className="py-2 px-4 m-2 rounded hover:bg-gray-300 text-right w-full whitespace-nowrap"
+          >
+            {item.num}
+          </a>
+        ))}
+      </div>
+
+      {/* Small dots for mobile */}
+      <div className="md:hidden flex flex-col justify-center items-center fixed right-3 top-1/2 -translate-y-1/2 gap-4">
+        {navItems.map((item) => (
+          <a
+            key={item.num}
+            href={item.href}
+            className="w-2 h-2 rounded-full bg-white hover:bg-white hover:scale-150 transition-transform"
+          >
+            <span className="sr-only">{item.text}</span>
+          </a>
+        ))}
+      </div>
+    </nav>
+  );
+};

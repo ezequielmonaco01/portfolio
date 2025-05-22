@@ -1,0 +1,31 @@
+{
+  "header": {
+    "title": "Ezequiel Mónaco",
+    "subtitle": "Desarrollador Front-End",
+    "platform": "Mobile/Web"
+  },
+  "aboutme": {
+    "title": "Sobre Mí",
+    "description": "Nací en San Vicente un pueblo del Sur de Buenos Aires, actualmente vivo en Lanús. Tengo 23 años, desde los 18 que desarrollo. En mi día adía colaboro como desarrollador Front-End en Adviters. En un futuro busco ser desarrollador autónomo, por lo mismo busco una mejora constante en mi stack de tecnologías."
+  },
+  "projects": {
+    "title": "Proyectos",
+    "description": "Aca podes ver algunos de mis proyectos realizados, te dejo tres de los mas destacados, de todas formas, podes encontrar todos aca:",
+    "linkWord": "aca:"
+  },
+  "techs": {
+    "title": "Habilidades y experiencia con tecnologías",
+    "description": "Actualmente mi experiencia se basa en el desarrollo y diseño Front-End, estas son algunas de las tecnologías que logre dominar en mi camino:",
+    "description2": "He aplicado pipelines de CI/CD en proyectos de React y React Native, comprendo las stores (App Store/Play Store), su configuración y todos los pasos para la publicación de aplicaciónes mobile. Aplico correctamente los fundamentos del test haciendo testing unitario y de integración en los proyectos."
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Que harias si tuvieses a un experto en Front End a tu alcance?",
+    "description2": "Si me necesitas para cualquier proyecto, o simplemente queres saludarme.",
+    "description3": "Podes hacerlo aca:"
+  },
+  "scroll": {
+    "message": "Scroll para continuar",
+    "message2": "Segui scrolleando para ver los proyectos"
+  }
+}

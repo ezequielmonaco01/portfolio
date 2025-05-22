@@ -1,0 +1,32 @@
+{
+  "header": {
+    "title": "Ezequiel Mónaco",
+    "subtitle": "Front-End Developer",
+    "platform": "Mobile/Web"
+  },
+  "aboutme": {
+    "title": "About Me",
+    "description": "I was born in San Vicente, a town in the south of Buenos Aires, and I currently live in Lanús. I'm 23 years old and have been developing since I was 18. In my daily work, I contribute as a Front-End Developer at Adviters. In the future, I aim to become an independent developer, which is why I'm constantly improving my technology stack."
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Here you can see some of the projects I’ve worked on. I’ve highlighted three of the most important ones, but you can find all of them ",
+    "link": "https://github.com/ezequielmonaco",
+    "linkWord": "here: "
+  },
+  "techs": {
+    "title": "Skills and Experience with Technologies",
+    "description": "My experience is currently focused on Front-End development and design. These are some of the technologies I have mastered along the way:",
+    "description2": "I’ve implemented CI/CD pipelines in React and React Native projects, and I understand the App Store/Play Store ecosystems, their configuration, and the entire process for publishing mobile applications. I correctly apply the fundamentals of testing, including unit and integration testing in projects."
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "What would you do if you had a Front-End expert at your disposal?",
+    "description2": "If you need me for any project or just want to say hello,",
+    "description3": "You can do it here:"
+  },
+  "scroll": {
+    "message": "Scroll to continue",
+    "message2": "Keep scrolling to see the projects"
+  }
+}
