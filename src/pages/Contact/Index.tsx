@@ -9,17 +9,17 @@ export const Index = () => {
       className="flex justify-center items-center flex-col p-4 md:p-[85px] w-full h-screen snap-center"
     >
       <div className="w-full">
-        <h1 className="text-3xl md:text-5xl font-bold text-center">
+        <h1 className="text-3xl md:text-5xl font-bold md:text-center">
           {t("contact.title")}
         </h1>
-        <h2 className="mt-4 md:mt-7 text-lg md:text-2xl text-center">
-          <span>{t("contact.description")}</span>
+        <h2 className="mt-4 md:mt-7 text-lg md:text-2xl md:text-center">
+          {t("contact.description")}
         </h2>
-        <h2 className="mt-4 md:mt-7 text-lg md:text-2xl text-center">
-          <span>{t("contact.description2")}</span>
+        <h2 className="mt-4 md:mt-7 text-lg md:text-2xl md:text-center">
+          {t("contact.description2")}
         </h2>
-        <h2 className="font-bold text-lg md:text-2xl text-center">
-          <span>{t("contact.description3")}</span>
+        <h2 className="font-bold text-lg md:text-2xl md:text-center">
+          {t("contact.description3")}
         </h2>
       </div>
       <div className="flex mt-6 md:mt-10 flex-col gap-6 md:gap-10 justify-center items-center">

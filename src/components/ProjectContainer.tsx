@@ -5,7 +5,7 @@ export const ProjectContainer = () => {
         <img src="" alt="" />
       </div>
       <div className="flex flex-col w-full md:w-[300px] h-auto md:h-[50px] gap-2 md:gap-3">
-        <h1 className="text-center text-lg md:text-xl font-bold">App Mobile</h1>
+        <p className="text-center text-lg md:text-xl font-bold">App Mobile</p>
         <div className="flex justify-evenly items-center">
           <img
             src="/icons/reactNativeIcon.png"
