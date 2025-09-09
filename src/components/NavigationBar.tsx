@@ -1,16 +1,18 @@
 import { ReactNode, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export const NavigationBar = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const navItems = [
-    { href: "#header", text: "inicio", num: "01" },
-    { href: "#about", text: "sobre mí", num: "02" },
-    { href: "#techs", text: "habilidades y tecnologias", num: "03" },
-    { href: "#projects", text: "proyectos", num: "04" },
-    { href: "#contact", text: "contacto", num: "05" },
-  ];
+    { href: "#header", text: t("navigationBar.home"), num: "01" },
+    { href: "#about", text: t("navigationBar.about"), num: "02" },
+    { href: "#techs", text: t("navigationBar.techs"), num: "03" },
+    { href: "#projects", text: t("navigationBar.projects"), num: "04" },
+    { href: "#contact", text: t("navigationBar.contact"), num: "05" },
+  ];  
 
   const RenderMenuOpen = (): ReactNode => {
     return (

@@ -6,12 +6,14 @@
   },
   "aboutme": {
     "title": "Sobre Mí",
-    "description": "Nací en San Vicente un pueblo del Sur de Buenos Aires, actualmente vivo en Lanús. Tengo 23 años, desde los 18 que desarrollo. En mi día adía colaboro como desarrollador Front-End en Adviters. En un futuro busco ser desarrollador autónomo, por lo mismo busco una mejora constante en mi stack de tecnologías."
+    "description": "Nací en San Vicente un pueblo del Sur de Buenos Aires, actualmente vivo en Lanús. Tengo 23 años, desde los 18 que desarrollo. En mi día a día colaboro como desarrollador Front-End en Adviters. En un futuro busco ser desarrollador autónomo, por lo mismo busco una mejora constante en mi stack de tecnologías."
   },
   "projects": {
     "title": "Proyectos",
     "description": "Aca podes ver algunos de mis proyectos realizados, te dejo tres de los mas destacados, de todas formas, podes encontrar todos ",
-    "linkWord": "aca:"
+    "linkWord": "aca:",
+    "repositoriesTitle": "Mis Repositorios de GitHub",
+    "viewOnGithub": "Ver en GitHub →"
   },
   "techs": {
     "title": "Habilidades y experiencia con tecnologías",
@@ -27,5 +29,12 @@
   "scroll": {
     "message": "Scroll para continuar",
     "message2": "Segui scrolleando para ver los proyectos"
+  },
+  "navigationBar": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "techs": "Habilidades y tecnologias",
+    "projects": "Proyectos",
+    "contact": "Contacto"
   }
 }

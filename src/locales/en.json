@@ -10,9 +10,11 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "Here you can see some of the projects I’ve worked on. I’ve highlighted three of the most important ones, but you can find all of them ",
+    "description": "Here you can see some of the projects I've worked on. I've highlighted three of the most important ones, but you can find all of them ",
     "link": "https://github.com/ezequielmonaco",
-    "linkWord": "here: "
+    "linkWord": "here: ",
+    "repositoriesTitle": "My GitHub Repositories",
+    "viewOnGithub": "View on GitHub →"
   },
   "techs": {
     "title": "Skills and Experience with Technologies",
@@ -28,5 +30,12 @@
   "scroll": {
     "message": "Scroll to continue",
     "message2": "Keep scrolling to see the projects"
+  },
+  "navigationBar": {
+    "home": "Home",
+    "about": "About Me",
+    "techs": "Skills and Technologies",
+    "projects": "Projects",
+    "contact": "Contact"
   }
 }
